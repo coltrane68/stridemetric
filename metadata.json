@@ -1,0 +1,8 @@
+{
+  "name": "StrideMetric",
+  "description": "Mobile-first metric 5K & 10K training tracker with a 4-day weekly plan, workout logger, shoe rotation mileage, and pace-to-treadmill calculator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

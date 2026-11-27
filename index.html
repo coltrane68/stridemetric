@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>StrideMetric — 5K &amp; 10K Training Tracker</title>
+    <meta
+      name="description"
+      content="Mobile-first metric 5K & 10K training tracker with a 4-day weekly schedule, workout logger, shoe rotation mileage, and target pace to treadmill speed calculator."
+    />
+    <meta property="og:title" content="StrideMetric — 5K & 10K Training Tracker" />
+    <meta
+      property="og:description"
+      content="Mobile-first metric 5K & 10K training tracker with a 4-day weekly schedule, workout logger, shoe rotation mileage, and target pace to treadmill speed calculator."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('stridemetric_theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-[#0B0F17] dark:text-slate-50 antialiased selection:bg-orange-500/20 selection:text-orange-700 dark:selection:text-orange-300">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

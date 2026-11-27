@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Archivo", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom high-contrast range input for Pace & Treadmill Calculator */
+input[type="range"].metric-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].metric-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+}
+
+.dark input[type="range"].metric-slider::-webkit-slider-runnable-track {
+  background: #1e293b;
+}
+
+input[type="range"].metric-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 26px;
+  width: 26px;
+  border-radius: 9999px;
+  background: #ea580c;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.25);
+  margin-top: -9px;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark input[type="range"].metric-slider::-webkit-slider-thumb {
+  background: #f97316;
+  border: 3px solid #0b0f17;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"].metric-slider:active::-webkit-slider-thumb {
+  transform: scale(1.1);
+}
+
+input[type="range"].metric-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+}
+
+.dark input[type="range"].metric-slider::-moz-range-track {
+  background: #1e293b;
+}
+
+input[type="range"].metric-slider::-moz-range-thumb {
+  height: 26px;
+  width: 26px;
+  border-radius: 9999px;
+  background: #ea580c;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.25);
+}
+
+.dark input[type="range"].metric-slider::-moz-range-thumb {
+  background: #f97316;
+  border: 3px solid #0b0f17;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
